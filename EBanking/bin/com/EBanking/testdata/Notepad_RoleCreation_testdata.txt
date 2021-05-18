@@ -1,0 +1,5 @@
+RoleName###RoleType###Results
+Managerasdf###E
+AsstManagerasdf###E
+Clerkasdf###E
+Cashiorasdf###E

@@ -1,0 +1,4 @@
+Employname###LoginPass###Role###Branch###Results
+Naveenasdf###naveen$###Managerasdf###Asdf1bran
+Naveeasd###naveeq$###Clerkasdf###Asdf2bran
+Naveeeeas###navdfg$###Clerkasdf###Asdf3bran

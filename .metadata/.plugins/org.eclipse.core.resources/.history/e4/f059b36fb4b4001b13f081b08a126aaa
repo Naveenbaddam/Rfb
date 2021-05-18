@@ -1,0 +1,21 @@
+package com.EBanking.masters;
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class SeleniumGrid4 
+
+{
+	DesiredCapabilities cap = null;
+	
+	public void Gd()
+	
+	{
+		cap = new DesiredCapabilities();
+		
+		cap.setBrowserName("firefox");
+		
+		cap.setPlatform(Platform.WINDOWS);
+	}
+
+}

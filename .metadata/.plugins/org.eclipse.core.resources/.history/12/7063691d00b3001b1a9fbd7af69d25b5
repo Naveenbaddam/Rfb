@@ -1,0 +1,102 @@
+package com.EBanking.Keyword;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import com.EBanking.Keyword.LibraryK;
+
+public class Keyword {
+
+	public static void main(String[] args) throws IOException
+	
+	{
+		LibraryK Lb = new LibraryK();
+		
+		FileInputStream fi = new FileInputStream("C:\\ProjectWorkSpace\\EBanking\\src\\com\\EBanking\\Keyword\\keyword_data.xlsx");
+		
+		XSSFWorkbook Wb = new XSSFWorkbook(fi);
+		
+		XSSFSheet Ws = Wb.getSheet("TestCase");
+		
+		XSSFSheet Ws1 = Wb.getSheet("TestSteps");
+		
+		int TCRowcount = Ws.getLastRowNum();
+		
+		System.out.println(TCRowcount);
+		
+		int TSRowcount = Ws1.getLastRowNum();
+		
+		System.out.println(TSRowcount);
+		
+		for(int i=1; i<=TCRowcount; i++)
+		{
+			String Exe = Ws.getRow(i).getCell(2).getStringCellValue();
+			
+			if(Exe.equalsIgnoreCase("Y"))
+			{
+				String TCID = Ws.getRow(i).getCell(0).getStringCellValue();
+				
+				System.out.println(TCID);
+				
+				for(int j = 1; j<=TSRowcount; j++ )
+				{
+					String TSTCID = Ws1.getRow(j).getCell(0).getStringCellValue();
+					
+					System.out.println(TSTCID);
+					
+					if(TCID.equalsIgnoreCase(TSTCID))
+					{
+						String Key = Ws1.getRow(j).getCell(3).getStringCellValue();
+						
+						System.out.println(Key);
+						
+						switch (Key) 
+						{
+						    case "RLanch":
+						    	   
+					               String Res = Lb.Launch("http://122.175.8.158/ranford2/");
+						    	
+						           break;
+						    
+						    case "RLogin":
+						    	
+						            String Res = Lb.Admin_Login("Admin", "Testing@");
+							    	
+						            break;
+						       
+						    case "RLogout":
+						    	
+							       String Res = Lb.
+								    	
+							       break;
+							    
+						       
+						    
+						       
+						       
+							    
+						    
+
+						default:
+							break;
+						}
+						
+						
+					}
+					
+					
+					
+					
+					
+				}
+			}
+			
+		}
+		
+
+	}
+
+}

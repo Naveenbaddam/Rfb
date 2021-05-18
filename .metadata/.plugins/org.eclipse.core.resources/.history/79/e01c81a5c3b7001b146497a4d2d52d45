@@ -1,0 +1,10 @@
+package com.MavenProject;
+
+public class SampleMaven {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
